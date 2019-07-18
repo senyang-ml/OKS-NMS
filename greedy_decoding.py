@@ -58,9 +58,7 @@ def connect_adjacent_keypoint(current_keypoint, mid_offsets,edge, candidate_queu
     
     return to_kp,to_kp_conf
     
-   
 def group_skeletons(keypoints, mid_offsets, skeleton_graph):
-    
     keypoints.sort(key=(lambda kp: kp['conf']), reverse=True)
   
     skeletons = []
