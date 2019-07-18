@@ -24,6 +24,7 @@ config.EDGES = [
         (5, 6),
         (2, 3)
     ]
+dir_edges = config.EDGES + [edge[::-1] for edge in config.EDGES] 
 
 def iterative_bfs(graph, start, path=[]):
 '''iterative breadth first search from start'''
@@ -62,7 +63,6 @@ def group_skeletons(keypoints, mid_offsets, skeleton_graph):
     keypoints.sort(key=(lambda kp: kp['conf']), reverse=True)
   
     skeletons = []
-    dir_edges = config.EDGES + [edge[::-1] for edge in config.EDGES] 
     
     while len(keypoints) > 0:
         kp = keypoints.pop(0)
