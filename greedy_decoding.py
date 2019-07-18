@@ -88,5 +88,3 @@ def group_skeletons(keypoints, mid_offsets, skeleton_graph):
 	    
         skeletons.append(this_skel)
     return skeletons
-
-```
